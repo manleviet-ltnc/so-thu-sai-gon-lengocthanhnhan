@@ -1,0 +1,8 @@
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\bin\Debug\So thu saigon.exe
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\bin\Debug\So thu saigon.pdb
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\obj\x86\Debug\So_thu_saigon.Form1.resources
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\obj\x86\Debug\So_thu_saigon.Properties.Resources.resources
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\obj\x86\Debug\So thu saigon.csproj.GenerateResource.Cache
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\obj\x86\Debug\So thu saigon.exe
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\obj\x86\Debug\So thu saigon.pdb
+C:\Users\Administrator.MRNC-GK1SVB1P2V\Documents\GitHub\so-thu-sai-gon-lengocthanhnhan\So thu saigon\So thu saigon\obj\x86\Debug\So thu saigon.csprojResolveAssemblyReference.cache
