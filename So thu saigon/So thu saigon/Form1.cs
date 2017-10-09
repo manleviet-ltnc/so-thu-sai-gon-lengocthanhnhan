@@ -39,16 +39,35 @@ namespace So_thu_saigon
             else
                 e.Effect = DragDropEffects.Move;
         }
-
+        bool isItemChange = false;
         private void lstDanhSach_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             {
-                ListBox lb = (ListBox)sender;
-                lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                bool test = false;
+                for (int i = 0; i < lstDanhSach.Items.Count; i++)
+                {
+                    string st = lstDanhSach.Items[i].ToString();
+                    string dt = e.Data.GetData(DataFormats.Text).ToString();
+                    if (dt == st)
+                        test = true;
+                }
+                if (test == false)
+                {
+                    int newindex = lstDanhSach.IndexFromPoint(lstDanhSach.PointToClient(new Point(e.X, e.Y)));
+                    lstDanhSach.Items.Remove(e.Data.GetData(DataFormats.Text));
+                    if (newindex != -1)
+                        lstDanhSach.Items.Insert(newindex, e.Data.GetData(DataFormats.Text));
+                    else
+                    {
+                        ListBox lb = (ListBox)sender;
+                        lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                    }
+                }
             }
         }
 
+        bool isSaves = false;
         private void Save(object sender, EventArgs e)
         {
             StreamWriter write = new StreamWriter("danhsachthu.txt");
@@ -59,6 +78,7 @@ namespace So_thu_saigon
                 write.WriteLine(item.ToString());
 
             write.Close();
+            isSaves = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -104,7 +124,7 @@ namespace So_thu_saigon
                                             DateTime.Now.Day,
                                             DateTime.Now.Month,
                                             DateTime.Now.Year);
-                                           
+
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
@@ -112,9 +132,38 @@ namespace So_thu_saigon
             timer1.Enabled = true;
         }
 
-    
+
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            lstDanhSach.Items.Remove(lstDanhSach.SelectedItem);
+        }
+
+        
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isSaves == false)
+            {
+                DialogResult kq = MessageBox.Show(" Ban co muon luu lai danh sach khong ?", "thong bao", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (kq == DialogResult.Yes)
+                {
+                    Save(sender, e);
+                    e.Cancel = false;
+                }
+
+                else if (kq == DialogResult.No)
+                    e.Cancel = false;
+                else
+                    e.Cancel = true;
+            }
+            else
+                mnuClose_Click(sender, e);
+        }
     }
-}
+ }
+                
+  
 
        
        
